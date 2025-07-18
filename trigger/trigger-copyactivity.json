@@ -1,0 +1,24 @@
+{
+	"name": "trigger-copyactivity",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyactivity",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 2,
+				"startTime": "2025-07-20T20:31:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
