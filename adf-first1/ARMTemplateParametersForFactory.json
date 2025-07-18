@@ -20,8 +20,20 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"adlsmovedelete_accountKey": {
+			"value": ""
+		},
+		"adlsmovedelete1_accountKey": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://adffirst3.dfs.core.windows.net/"
+		},
+		"adlsmovedelete_properties_typeProperties_url": {
+			"value": "https://firstadlsv2.dfs.core.windows.net/"
+		},
+		"adlsmovedelete1_properties_typeProperties_url": {
+			"value": "https://firstadlsv2.dfs.core.windows.net/"
 		}
 	}
 }
