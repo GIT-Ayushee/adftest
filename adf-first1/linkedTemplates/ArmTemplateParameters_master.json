@@ -20,6 +20,9 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage2megha_accountKey": {
+			"value": ""
+		},
 		"adlsmovedelete_accountKey": {
 			"value": ""
 		},
@@ -28,6 +31,9 @@
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://adffirst3.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2megha_properties_typeProperties_url": {
+			"value": "https://firstadlsv2.dfs.core.windows.net/"
 		},
 		"adlsmovedelete_properties_typeProperties_url": {
 			"value": "https://firstadlsv2.dfs.core.windows.net/"

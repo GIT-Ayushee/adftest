@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
+		"AzureDataLakeStorage2megha_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2megha'"
+		},
 		"adlsmovedelete_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'adlsmovedelete'"
@@ -38,6 +42,10 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adffirst3.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2megha_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://firstadlsv2.dfs.core.windows.net/"
 		},
 		"adlsmovedelete_properties_typeProperties_url": {
 			"type": "string",
@@ -89,6 +97,9 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
+					"AzureDataLakeStorage2megha_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2megha_accountKey')]"
+					},
 					"adlsmovedelete_accountKey": {
 						"value": "[parameters('adlsmovedelete_accountKey')]"
 					},
@@ -97,6 +108,9 @@
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2megha_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2megha_properties_typeProperties_url')]"
 					},
 					"adlsmovedelete_properties_typeProperties_url": {
 						"value": "[parameters('adlsmovedelete_properties_typeProperties_url')]"
@@ -107,6 +121,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adf-first1_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf-first1_ArmTemplate_0')]"
+			]
 		}
 	]
 }
