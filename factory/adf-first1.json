@@ -1,5 +1,13 @@
 {
 	"name": "adf-first1",
+	"properties": {
+		"globalParameters": {
+			"env": {
+				"type": "string",
+				"value": "prod"
+			}
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
