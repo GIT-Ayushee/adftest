@@ -1,0 +1,24 @@
+{
+	"name": "trigger12345",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "adfpipeline12345",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adfcont1/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/27fbcfc0-3424-4df1-b866-dcec7a146c32/resourceGroups/azuredatafactory/providers/Microsoft.Storage/storageAccounts/azuredatafactory123",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
