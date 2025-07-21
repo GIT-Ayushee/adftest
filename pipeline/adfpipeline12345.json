@@ -1,5 +1,5 @@
 {
-	"name": "copyactivity",
+	"name": "adfpipeline12345",
 	"properties": {
 		"activities": [
 			{
@@ -18,9 +18,8 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
+							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -50,20 +49,18 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "adfdataset12345",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText2",
+						"referenceName": "adfdataset00000",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
-		"annotations": [],
-		"lastPublishTime": "2025-07-18T14:51:49Z"
-	},
-	"type": "Microsoft.DataFactory/factories/pipelines"
+		"annotations": []
+	}
 }

@@ -1,0 +1,22 @@
+{
+	"name": "adfdataset00000",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageadf12345",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "adfcont2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
