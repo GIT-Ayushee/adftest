@@ -1,0 +1,24 @@
+{
+	"name": "trigger12345",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "adfpipeline12345",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 2,
+				"startTime": "2025-07-21T11:42:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
