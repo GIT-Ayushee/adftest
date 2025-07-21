@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "business-financial-data-march-2025-quarter-csv.csv",
 				"container": "adfcont1"
 			},
 			"columnDelimiter": ",",
